@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
+const themeDir = __dirname + '/../../';
 
 module.exports = {
   content: [
-    "../layouts/**/*.{html}",
+    themeDir + 'layouts/**/*.html',
+    themeDir + 'layouts/*.html',
   ],
   theme: {
     extend:{},

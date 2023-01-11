@@ -1,0 +1,1 @@
+### vgo - a simple hugo theme

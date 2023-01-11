@@ -1,22 +1,24 @@
-<nav id="header" class="bg-gray-100 dark:bg-gray-800 fixed w-full z-10 top-0 shadow">
+<nav id="header" class="bg-gray-100 dark:bg-gray-800 fixed w-full z-10 top-0 shadow ">
 
-    
     {{/*  <div id="progress" class="h-1 top-0" style="background:linear-gradient(to right, #597cc8 var(--scroll), transparent 0);"></div>  */}}
 
-    <div class="w-full container mx-auto flex flex-wrap items-center justify-between my-1">
-        <div class="pr-2 flex-auto flex">
+    <div class="inner flex justify-center items-center sm:justify-between flex-row sm:flex-row mx-1">
+        <div class="flex flex-row justify-start gap-4">
             <a class="text-base no-underline hover:no-underline font-bold"  href="/">
                 {{ $.Site.Title }}
             </a>
         </div>
-    </div>
 
-    <ul>
-        {{- range $item := $.Site.Params.NavItems }}
-        <li class="mr-3">
-            <a href="{{ index $item 1 }}" class="inline-block py-2 px-2 text-gray-700 dark:text-gray-300 font-bold no-underline">{{ index $item 0 }}</a>
-        {{- end }}
-    </ul>
+        
+        <ul class="color-white flex flex-row gap-4 items-center text-base mt-3">
+            {{- range $item := $.Site.Params.NavItems }}
+            <li class="">
+                <a href="{{ index $item 1 }}" class="inline-block py-2 px-2 text-gray-700 dark:text-gray-300 font-bold no-underline">{{ index $item 0 }}</a>
+            {{- end }}
+        </ul>
+    
+        
+    </div>
 
 
 </nav>
