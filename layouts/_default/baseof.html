@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+    {{- partial "head.html" . -}}
+    <body class="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 tracking-wider 
+    leading-normal font-mono flex flex-col justify-center h-screen">
+        {{- partial "header.html" . -}}
+        <div id="content" class="flex-1">
+        {{- block "main" . }}{{- end }}
+        </div>
+
+        <div class="text-center bottom-0">
+            {{- partial "footer.html" . -}}
+        </div>
+        
+    </body>
+</html>
